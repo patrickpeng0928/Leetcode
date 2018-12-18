@@ -6,27 +6,27 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 ## Algorithms
 
 * [Bit Manipulation](#bit-manipulation)
-* [Array]
-* [String]
-* [Linked List]
-* [Stack]
-* [Queue]
-* [Heap]
-* [Tree]
-* [Hash Table]
-* [Math]
-* [Two Pointers]
-* [Sort]
-* [Recursion]
-* [Binary Search]
-* [Binary Search Tree]
-* [Breadth-First Search]
-* [Depth-First Search]
-* [Backtracking]
-* [Dynamic Programming]
-* [Greedy]
-* [Geometry]
-* [Design]
+* [Array](#array)
+* [String](#string)
+* [Linked List](#linked-list)
+* [Stack](#stack)
+* [Queue](#queue)
+* [Heap](#heap)
+* [Tree](#tree)
+* [Hash Table](#hash-table)
+* [Math](#math)
+* [Two Pointers](#two-pointers)
+* [Sort](#sort)
+* [Recursion](#recursion)
+* [Binary Search](#binary-search)
+* [Binary Search Tree](#binary-search-tree)
+* [Breadth-First Search](#breadth-first-search)
+* [Depth-First Search](#depth-first-search)
+* [Backtracking](#backtracking)
+* [Dynamic Programming](#dynamic-programming)
+* [Greedy](#greedy)
+* [Geometry](#geometry)
+* [Design](#design)
 
 ## Database
 
