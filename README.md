@@ -5,7 +5,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 
 ## Algorithms
 
-* [Bit Manipulation]
+* [Bit Manipulation](#bit-manipulation)
 * [Array]
 * [String]
 * [Linked List]
