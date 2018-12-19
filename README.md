@@ -45,7 +45,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 ## Array(List)
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_ListOperation.py) | O(n) | O(1) | Easy |  |  |
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_ListOperation.py) | O(n^2) | O(n) | Easy |  |  |
 
 ## String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
@@ -80,12 +80,12 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 ## Hash Table
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number.py) | O(n) | O(1) | Easy |  |  |
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_HashTable.py) | O(n) | O(n) | Easy |  |  |
 
 ## Math
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number.py) | O(n) | O(1) | Easy |  |  |
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_Math.py) | O(n) | O(n) | Easy |  |  |
 
 ## Sort
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
