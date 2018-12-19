@@ -1,5 +1,5 @@
 class Solution(object):
-        def singelNumberList(self, nums):
+        def singleNumberList(self, nums):
                 """
                 Time - O(n^2)
                 Space - O(n)
