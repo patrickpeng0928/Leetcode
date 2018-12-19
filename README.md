@@ -40,7 +40,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 ## Bit Manipulation
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.py) | O(n) | O(1) | Easy |  |  |
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.py)<br />[Scala](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.scala) | O(n) | O(1) | Easy |  |  |
 
 ## Array(List)
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
