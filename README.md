@@ -40,12 +40,12 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 ## Bit Manipulation
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.py) | O(n) | O(1) | Easy |  |  |
 
-
-## Array
+## Array(List)
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_ListOperation.py) | O(n) | O(1) | Easy |  |  |
 
 ## String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
@@ -80,12 +80,12 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 ## Hash Table
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number.py) | O(n) | O(1) | Easy |  |  |
 
 ## Math
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number.py) | O(n) | O(1) | Easy |  |  |
 
 ## Sort
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
