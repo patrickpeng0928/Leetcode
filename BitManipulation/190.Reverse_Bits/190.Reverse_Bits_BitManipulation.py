@@ -1,5 +1,5 @@
 class Solution(object):
-    def reverseBits(self, n):
+    def reverseBitsBitManipulation(self, n):
         """
         Time - O(length(n)) = O(32)
         Space - O(1)
@@ -12,4 +12,3 @@ class Solution(object):
             result |= n & 1
             n >>= 1
         return result
-            
