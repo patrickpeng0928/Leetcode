@@ -1,4 +1,4 @@
-# [LeetCode](https://leetcode.com/problemset/algorithms/) 
+# [LeetCode](https://leetcode.com/problemset/algorithms/)
 
 The number of LeetCode questions is increasing every week. I'll keep updating for full summary and better solutions. Stay tuned for updates.
 (Notes: "📖" means you need to subscribe to [LeetCode premium membership](https://leetcode.com/subscribe/) for the access to premium questions.)
@@ -38,115 +38,117 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 * [Shell Script]
 
 ## Bit Manipulation
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.py)<br />[Scala](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.scala) | O(n) | O(1) | Easy |  |  |
+| 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.py)<br />[Scala](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.scala) | O(n) | O(1) | Easy |  |  |
+| 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md) | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_BitManipulation.py) | O(n) | O(1) | Easy |  |  |
 
 ## Array(List)
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_ListOperation.py) | O(n^2) | O(n) | Easy |  |  |
+| 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_ListOperation.py) | O(n^2) | O(n) | Easy |  |  |
 
 ## String
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Linked List
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Stack
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Queue
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Heap
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Tree
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Hash Table
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_HashTable.py) | O(n) | O(n) | Easy |  |  |
+| 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_HashTable.py) | O(n) | O(n) | Easy |  |  |
 
 ## Math
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [Python](BitManipulation/136.Single_Number/136.Single_Number_Math.py) | O(n) | O(n) | Easy |  |  |
+| 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_Math.py) | O(n) | O(n) | Easy |  |  |
+| 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md) | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_Math.py) | O(n) | O(n) | Easy |  |  |
 
 ## Sort
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Two Pointers
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Recursion
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Binary Search
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Binary Search Tree
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Breadth-First Search
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Depth-First Search
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Backtracking
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Dynamic Programming
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Greedy
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Design
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## SQL
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 
 
 ## Shell Script
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
