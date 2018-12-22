@@ -43,6 +43,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 | 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.py)<br />[Scala](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.scala) | O(n) | O(1) | Easy |  |  |
 | 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md) | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_BitManipulation.py) | O(n) | O(1) | Medium |  |  |
 | 190 | [Reverse Bits](BitManipulation/190.Reverse_Bits/190.Reverse_Bits.md) | [Python](BitManipulation/190.Reverse_Bits/190.Reverse_Bits_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
+| 191 | [Number of 1 Bits](BitManipulation/191.Number_of_1_Bits/191.Number_of_1_Bits.md) | [Python](BitManipulation/191.Number_of_1_Bits/191.Number_of_1_Bits_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
 
 ## Array(List)
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
