@@ -41,11 +41,16 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 | 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.py)<br />[Scala](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.scala) | O(n) | O(1) | Easy |  |  |
-| 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md) | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_BitManipulation.py) | O(n) | O(1) | Medium |  |  |
 | 190 | [Reverse Bits](BitManipulation/190.Reverse_Bits/190.Reverse_Bits.md) | [Python](BitManipulation/190.Reverse_Bits/190.Reverse_Bits_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
 | 191 | [Number of 1 Bits](BitManipulation/191.Number_of_1_Bits/191.Number_of_1_Bits.md) | [Python](BitManipulation/191.Number_of_1_Bits/191.Number_of_1_Bits_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
-| 201 | [Bitwise AND of Numbers Range](BitManipulation/201.Bitwise_AND_of_Numbers_Range/201.Bitwise_AND_of_Numbers_Range.md) | [Python](BitManipulation/201.Bitwise_AND_of_Numbers_Range/201.Bitwise_AND_of_Numbers_Range_BitManipulation.py) | O(1) | O(1) | Medium |  |  |
 | 231 | [Power of Two](BitManipulation/231.Power_of_Two/231.Power_of_Two.md) | [Python](BitManipulation/231.Power_of_Two/231.Power_of_Two_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
+| 342 | [Power of Four](BitManipulation/342.Power_of_Four/342.Power_of_Four.md) | [Python](BitManipulation/342.Power_of_Four/342.Power_of_Four_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
+
+
+
+| 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md) | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_BitManipulation.py) | O(n) | O(1) | Medium |  |  |
+| 201 | [Bitwise AND of Numbers Range](BitManipulation/201.Bitwise_AND_of_Numbers_Range/201.Bitwise_AND_of_Numbers_Range.md) | [Python](BitManipulation/201.Bitwise_AND_of_Numbers_Range/201.Bitwise_AND_of_Numbers_Range_BitManipulation.py) | O(1) | O(1) | Medium |  |  |
+| 260 | [Single Number III](BitManipulation/260.Single_Number_III/260.Single_Number_III.md) | [Python](BitManipulation/260.Single_Number_III/260.Single_Number_III.py) | O(1) | O(1) | Medium |  |  |
 
 ## Array(List)
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
@@ -57,6 +62,8 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 | 190 | [Reverse Bits](BitManipulation/190.Reverse_Bits/190.Reverse_Bits.md) | [Python](BitManipulation/190.Reverse_Bits/190.Reverse_Bits_String.py) | O(1) | O(1) | Easy |  |  |
 | 231 | [Power of Two](BitManipulation/231.Power_of_Two/231.Power_of_Two.md) | [Python](BitManipulation/231.Power_of_Two/231.Power_of_Two_String.py) | O(1) | O(1) | Easy |  |  |
+| 342 | [Power of Four](BitManipulation/342.Power_of_Four/342.Power_of_Four.md) | [Python](BitManipulation/342.Power_of_Four/342.Power_of_Four_String.py) | O(1) | O(1) | Easy |  |  |
+
 
 ## Linked List
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
@@ -94,6 +101,8 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 | 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_Math.py) | O(n) | O(n) | Easy |  |  |
 | 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md) | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_Math.py) | O(n) | O(n) | Easy |  |  |
 | 231 | [Power of Two](BitManipulation/231.Power_of_Two/231.Power_of_Two.md) | [Python](BitManipulation/231.Power_of_Two/231.Power_of_Two_Math.py) | O(1) | O(1) | Easy |  |  |
+| 342 | [Power of Four](BitManipulation/342.Power_of_Four/342.Power_of_Four.md) | [Python](BitManipulation/342.Power_of_Four/342.Power_of_Four_Math.py) | O(1) | O(1) | Easy |  |  |
+
 
 ## Sort
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
