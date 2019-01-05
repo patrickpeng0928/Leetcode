@@ -45,7 +45,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 | 191 | [Number of 1 Bits](BitManipulation/191.Number_of_1_Bits/191.Number_of_1_Bits.md) | [Python](BitManipulation/191.Number_of_1_Bits/191.Number_of_1_Bits_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
 | 231 | [Power of Two](BitManipulation/231.Power_of_Two/231.Power_of_Two.md) | [Python](BitManipulation/231.Power_of_Two/231.Power_of_Two_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
 | 342 | [Power of Four](BitManipulation/342.Power_of_Four/342.Power_of_Four.md) | [Python](BitManipulation/342.Power_of_Four/342.Power_of_Four_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
-
+| 371 | [Sum of Two Integers](BitManipulation/371.Sum_of_Two_Integers/371.Sum_of_Two_Integers.md) | [Python](BitManipulation/371.Sum_of_Two_Integers/371.Sum_of_Two_Integers_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
 
 
 | 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md) | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_BitManipulation.py) | O(n) | O(1) | Medium |  |  |
