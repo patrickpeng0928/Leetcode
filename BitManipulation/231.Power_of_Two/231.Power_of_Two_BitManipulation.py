@@ -10,7 +10,7 @@ class Solution(object):
             return False
         while n % 2 == 0:
             n >>= 1
-        return True if n == 1 else False
+        return n == 1
 
     def powerOfTwoBitManipulation2(self, n):
         """
