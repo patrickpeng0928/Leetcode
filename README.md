@@ -46,7 +46,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 | 231 | [Power of Two](BitManipulation/231.Power_of_Two/231.Power_of_Two.md) | [Python](BitManipulation/231.Power_of_Two/231.Power_of_Two_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
 | 342 | [Power of Four](BitManipulation/342.Power_of_Four/342.Power_of_Four.md) | [Python](BitManipulation/342.Power_of_Four/342.Power_of_Four_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
 | 371 | [Sum of Two Integers](BitManipulation/371.Sum_of_Two_Integers/371.Sum_of_Two_Integers.md) | [Python](BitManipulation/371.Sum_of_Two_Integers/371.Sum_of_Two_Integers_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
-
+| 389 | [Find the Difference](BitManipulation/389.Find_the_Difference/389.Find_the_Difference.md) | [Python](BitManipulation/389.Find_the_Difference/389.Find_the_Difference_BitManipulation.py) | O(1) | O(1) | Easy |  |  |
 
 | 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md) | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_BitManipulation.py) | O(n) | O(1) | Medium |  |  |
 | 201 | [Bitwise AND of Numbers Range](BitManipulation/201.Bitwise_AND_of_Numbers_Range/201.Bitwise_AND_of_Numbers_Range.md) | [Python](BitManipulation/201.Bitwise_AND_of_Numbers_Range/201.Bitwise_AND_of_Numbers_Range_BitManipulation.py) | O(1) | O(1) | Medium |  |  |
@@ -56,6 +56,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 | 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_ListOperation.py) | O(n^2) | O(n) | Easy |  |  |
+| 389 | [Find the Difference](BitManipulation/389.Find_the_Difference/389.Find_the_Difference.md) | [Python](BitManipulation/389.Find_the_Difference/389.Find_the_Difference_Array.py) | O(1) | O(1) | Easy |  |  |
 
 ## String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
@@ -96,12 +97,13 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 | 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_HashTable.py) | O(n) | O(n) | Easy |  |  |
 
 ## Math
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
-|-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-| 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_Math.py) | O(n) | O(n) | Easy |  |  |
-| 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md) | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_Math.py) | O(n) | O(n) | Easy |  |  |
-| 231 | [Power of Two](BitManipulation/231.Power_of_Two/231.Power_of_Two.md) | [Python](BitManipulation/231.Power_of_Two/231.Power_of_Two_Math.py) | O(1) | O(1) | Easy |  |  |
-| 342 | [Power of Four](BitManipulation/342.Power_of_Four/342.Power_of_Four.md) | [Python](BitManipulation/342.Power_of_Four/342.Power_of_Four_Math.py) | O(1) | O(1) | Easy |  |  |
+|  #  |                                           Title                                           |                                     Solution                                      | Time | Space | Difficulty | Tag | Note |
+| --- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ---- | ----- | ---------- | --- | ---- |
+| 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md)                   | [Python](BitManipulation/136.Single_Number/136.Single_Number_Math.py)             | O(n) | O(n)  | Easy       |     |      |
+| 137 | [Single Number II](BitManipulation/137.Single_Number_II/137.Single_Number_II.md)          | [Python](BitManipulation/137.Single_Number_II/137.Single_Number_II_Math.py)       | O(n) | O(n)  | Easy       |     |      |
+| 231 | [Power of Two](BitManipulation/231.Power_of_Two/231.Power_of_Two.md)                      | [Python](BitManipulation/231.Power_of_Two/231.Power_of_Two_Math.py)               | O(1) | O(1)  | Easy       |     |      |
+| 342 | [Power of Four](BitManipulation/342.Power_of_Four/342.Power_of_Four.md)                   | [Python](BitManipulation/342.Power_of_Four/342.Power_of_Four_Math.py)             | O(1) | O(1)  | Easy       |     |      |
+| 389 | [Find the Difference](BitManipulation/389.Find_the_Difference/389.Find_the_Difference.md) | [Python](BitManipulation/389.Find_the_Difference/389.Find_the_Difference_Math.py) | O(1) | O(1)  | Easy       |     |      |
 
 
 ## Sort
