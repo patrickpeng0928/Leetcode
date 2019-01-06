@@ -13,12 +13,3 @@ class Solution(object):
             b = ((a & b) << 1) & mask
             a = temp
         return a if a <= maximum else ~(a ^ mask)
-
-    def sumOfTwoIntegersBitManipulation2(self, n):
-        """
-        Time - O(1)
-        Space - O(1)
-        :type n: integer
-        :rtype: integer
-        """
-        return n > 0 and (n & (n - 1)) == 0 and (n & 0x55555555 ) != 0
