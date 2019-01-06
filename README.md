@@ -37,7 +37,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 
 * [Shell Script]
 
-## Bit Manipulation
+## [Bit Manipulation](BitManipulation/BitManipulation.md)
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 | 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.py)<br />[Scala](BitManipulation/136.Single_Number/136.Single_Number_BitManipulation.scala) | O(n) | O(1) | Easy |  |  |
