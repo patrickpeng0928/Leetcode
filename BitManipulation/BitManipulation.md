@@ -129,9 +129,8 @@ def updateBit(num, position, bitIs1):
 | ----------------------------------------------------- | ---------------- | --------------- |
 | 1 at i, other 0s                                      | `1 << i`         | i = 3, 00100000 |
 | 0 at i, other 1s                                      | `~(1 << i)`      | i = 3, 11011111 |
-| 1s after i, other 0s<br> 0s from MSB to i (inclusive) | (1 << i) - 1     | i = 3, 00000111 |
-| 0s after i (inclusive), other 1s                      | -1 << (i + 1)    | i = 3, 11110000 |
-|                                                       |                  |                 |
+| 1s after i, other 0s<br> 0s from MSB to i (inclusive) | `(1 << i) - 1`    | i = 3, 00000111 |
+| 0s after i (inclusive), other 1s                      | `-1 << (i + 1)`   | i = 3, 11110000 |
 
 ## Questions
 ### 5.1 Insertion:
@@ -145,10 +144,14 @@ Input: N = 10000000000, M = 10011, i = 2, j = 6
 Output:N = 10001001100
 ```
 
+******
 * Hints:
 
-#137, #169, #215
+#137 Break this into parts. Focus first on clearing the appropriate bits.
+#169 To clear the bits, create a "bit mask"that looks like a series of 1s, then Os, then 1s.
+#215 It's easy to create a bit mask of Os at the beginning or �nd. But how do you create a bit mask with a bunch of zeroes in the middle?Do it the easy way: Create a bit mask for the left side and then another one for the right side.Then you can merge those.
 
+******
 * Answer
 ```python
 def insertion(n, m, i, j):
@@ -180,7 +183,13 @@ Given a real number between O and 1 (e.g., 0.72) that is passed in as a double, 
 #743,#767,#773,#269,#297
 
 * Answer
-
+```python
+def binary2String(n):
+    """
+    :type n: double           [0, 1]
+    :rtype int                32-bit binary or ERROR.
+    """
+```
 
 ### 5.3 Flip Bit to Win
 * Description
