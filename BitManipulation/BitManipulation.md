@@ -148,7 +148,9 @@ Output:N = 10001001100
 * Hints:
 
 #137 Break this into parts. Focus first on clearing the appropriate bits.
+
 #169 To clear the bits, create a "bit mask"that looks like a series of 1s, then Os, then 1s.
+
 #215 It's easy to create a bit mask of Os at the beginning or �nd. But how do you create a bit mask with a bunch of zeroes in the middle?Do it the easy way: Create a bit mask for the left side and then another one for the right side.Then you can merge those.
 
 ******
@@ -178,17 +180,40 @@ def insertion(n, m, i, j):
 
 Given a real number between O and 1 (e.g., 0.72) that is passed in as a double, print the binary representation. If the number cannot be represented accurately in binary with at most 32 characters, print "ERROR."
 
+******
 * Hints:
 
-#743,#767,#773,#269,#297
+#143 To wrap your head around the problem, try thinking about how you'd do it for integers.
 
+#167 In a number like .893 (in base 10), what does each digit signify? What then does each digit in .10010 signify in base 2?
+
+#173 A number such as .893 (in base 10) indicates `8 * 10^-1 + 9 * 10^-2 + 3 * 10^-3`. Translate this system into base 2.
+
+#269 How would you get the first digit in .893? If you multiplied by 10, you'd shift the values over to get 8.93. What happens if you multiply by 2?
+
+#297 Think about what happens for values that can't be represented accurately in binary.
+
+******
 * Answer
 ```python
-def binary2String(n):
+def binaryReal2String(n):
     """
-    :type n: double           [0, 1]
+    :type n: double           (0, 1)
     :rtype int                32-bit binary or ERROR.
     """
+    if n >= 1 or n <= 0: return "ERROR"
+    res = ['.']
+    while n > 0:
+      if len(res) >= 32:
+        return "ERROR"
+      tmp = n * 2
+      if tmp >= 1:
+        res.append('1')
+        n = tmp - 1
+      else:
+        res.append('0')
+        n = tmp
+    return ''.join(res)
 ```
 
 ### 5.3 Flip Bit to Win
