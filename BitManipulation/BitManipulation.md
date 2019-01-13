@@ -219,7 +219,7 @@ def binaryReal2String(n):
 ### 5.3 Flip Bit to Win
 * Description
 
-You have an integer and you can flip exactly one bit from a 0 to a 1. Write code to find the length of the longest sequence of ls you could create.
+You have an integer and you can flip exactly one bit from a 0 to a 1. Write code to find the length of the longest sequence of 1s you could create.
 
 * EXAMPLE
 ```
@@ -228,8 +228,26 @@ Output: 8
 ```
 * Hints:
 
-#759, #226, #374,#352
+#159, Start with a brute force solution. Can you try all possibilities?
 
+#226, Flipping a O to a 1 can merge two sequences of 1s-but only if the two sequences are separated by only one 0.
+
+#374, Each sequence can be lengthened by merging it with an adjacent sequence (if any) or just flipping the immediate neighboring zero. You just need to find the best choice.
+
+#352, Try to do it in linear time, a single pass, and 0(1) space.
+
+* Answer
+
+```python
+def flipBit(num):
+    """
+    :type num: interger
+    :rtype: int
+    Brut force: DP
+    11100011011111
+    """
+
+```
 
 ### 5.4 Next Number
 * Description
