@@ -52,7 +52,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 | 201 | [Bitwise AND of Numbers Range](BitManipulation/201.Bitwise_AND_of_Numbers_Range/201.Bitwise_AND_of_Numbers_Range.md) | [Python](BitManipulation/201.Bitwise_AND_of_Numbers_Range/201.Bitwise_AND_of_Numbers_Range_BitManipulation.py) | O(1) | O(1) | Medium |  |  |
 | 260 | [Single Number III](BitManipulation/260.Single_Number_III/260.Single_Number_III.md) | [Python](BitManipulation/260.Single_Number_III/260.Single_Number_III.py) | O(1) | O(1) | Medium |  |  |
 
-## Array(List)
+## [Array(List)](Array/ArrayAndString.md)
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 | 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_ListOperation.py) | O(n^2) | O(n) | Easy |  |  |
