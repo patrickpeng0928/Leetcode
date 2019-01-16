@@ -125,6 +125,7 @@ while (left < right):
 * Moore Voting Algo - Leetcode 169
 
 #### Summary
+```
 Array - Sorting
       - Two pointers - one-way two pointesrs - windows
                                              - sub-array
@@ -133,8 +134,10 @@ Array - Sorting
                      - Rotation
       - Implementation
       - Math algorithms
+```
+#### Leetcode
 * Sorting
-  * 75, 283, 215, 287, 334, 300, 88, 387, 164, 347, 243, 244, 245,
+  * 75, 283, 215, 287, 334, 300, 88, 387, 164, 347, 243, 244, 245
 * One-way two pointers
   * Array operations: 26, 27, 80
   * Windows: 56, 57, 252, 253
@@ -150,3 +153,53 @@ Array - Sorting
   * 134, 169
 * Others
   * 321, 324, 327
+
+### Binary search
+* Best for look up in an array
+* Search element in a **sorted** array
+* Stored in **sequence**
+
+#### Implementation
+* Recursive
+* Iterative
+* Importance:
+```
+mid = (right - left) / 2 + left
+```
+* Note:
+```
+right + left > Integer.MAX_VALUE (Overflow)
+```
+* Time complexity: O(log n)
+* Space complexity: O(log n)
+
+#### Iterative Implementation
+* left <= right
+* left < right
+* left + 1 < right
+
+#### Related questions
+* Search, Find, Look up, etc
+* Sub-Array
+* 1-D Array -> 2-D Array
+* 2-D Array search best solution
+
+#### LeetCode
+* 35. Search Insert Position
+* 81. Search in Rotated Sorted Array II
+* 300. Sub-array
+* 74. Search 2-D Array
+* 278, 35, 374, 34, 163, 275, 349, 350
+* Rotated array: 33, 81, 153, 154
+* increasing/decreasing: 354, 315, 300
+* 2-D Array: 74, 240, 378, 302
+
+#### Summary
+```
+Binary search - Judgement/Edge conditions
+              - Implementation - Recursive
+                               - Iterative
+              - Rotate
+              - Sub-array
+              - 2-D array
+```
