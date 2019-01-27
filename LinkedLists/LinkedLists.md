@@ -245,4 +245,5 @@ Output: C
 * System Design and Scal­ability (#9.5)
 * Moderate Problems (#16.25)
 * Hard Problems (#17.12)
-* Hints start on page 653
+
+### Hints start on page 653
