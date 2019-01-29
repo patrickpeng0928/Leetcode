@@ -76,6 +76,10 @@ class Tree:
                 self.add_node(child, root.name)
 
     @property
+    def root(self):
+        return self._root
+
+    @property
     def nodes(self):
         return self._nodes
 
@@ -88,29 +92,41 @@ class Tree:
     def __repr__(self):
         return self._nodes
 
+    def display_helper(self, identifier, level):
+            print("\t" * level, "{}".format(identifier))
+
     def display(self, name, depth = _ROOT):
-        # TODO: Not clear
-        children = self._nodes[name].children
-        if depth = _ROOT:
-            print("{}".format(name))
+        l = 0
+        self.display_helper(name, l)
+        queue = list(map(lambda e: (e, l + 1), self.nodes[name].children))
+        while queue:
+            first = queue[0]
+            node = first[0]
+            lvl = first[1]
+            if lvl <= depth:
+                self.display_helper(node.name, lvl)
+                expansion = self.nodes[name].children
+                queue = list(map(lambda e: (e, lvl + 1), expansion)) + queue[1:]
+            else:
+                queue = queue[1:]
 
     def traverse(self, name, mode = _DEPTH):
-        yield self._nodes[name]
-        queue = self._nodes[name].children
+        yield self.nodes[name]
+        queue = self.nodes[name].children
         while queue:
             yeild queue[0]
-            expansion = self._nodes[queue[0].name].children
+            expansion = self.nodes[queue[0].name].children
             if mode = _DEPTH:
                 queue = expansion + queue[1:0]
             if mode = _BREADTH:
                 queue = queue[1:0] + expansion
 
     def __getitem__(self, key):
-        return self._nodes[key]
+        return self.nodes[key]
 
     def __setitem__(self, key, item):
         assert isinstance(item, Node)
-        return self._nodes[key] = item
+        return self.nodes[key] = item
 
 
 ```
@@ -162,6 +178,24 @@ class Tree:
         depth += 1
         for child in children:
             self.display(child, depth)  # recursive call
+
+    def display_helper(self, identifier, level):
+        print("\t" * level, "{}".format(identifier))
+
+    def display2(self, identifier, depth=_ROOT):
+        l = 0
+        self.display_helper(identifier, l)
+        queue = [ m for m in map(lambda e: (e, l + 1), self[identifier].children) ]
+        while queue:
+            first = queue[0]
+            ident = first[0]
+            lvl = first[1]
+            if lvl <= depth:
+                self.display_helper(ident, lvl)
+                expansion = self[ident].children
+                queue = [ m for m in map(lambda e: (e, lvl + 1), expansion) ] + queue[1:]
+            else:
+                queue = queue[1:]
 
     def traverse(self, identifier, mode=_DEPTH):
         # Python generator. Loosly based on an algorithm from
