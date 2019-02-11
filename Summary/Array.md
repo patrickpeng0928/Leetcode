@@ -109,30 +109,26 @@ def insertionSort(arr):
         arr[j + 1] = key
 ```
 
-* Merge sort
-* Iterative Merge Sort
+* Merge sort - O(n * log n)
+* Recursive Merge Sort
 
 ```python
+# Recursive Merge Sort
 def merge(left, right):
     if not left or not right:
         return left or right
-
     result = []
-    i, j, k = 0, 0, 0
+    k = 0
     nl, nr = len(left), len(right)
-    while (k <= nl + nr):
-        if left[i] < right[j]:
-            result.append(left[i])
-            i += 1
-            k += 1
+    while (k < nl + nr):
+        if left[0] < right[0]:
+            result.append(left.pop(0))
         else:
-            result.append(right[j])
-            j += 1
-            k += 1
-        if i == nl or j == nr:
-            result.extend(left[i:] or right[j:])
-            k += len(left[i:]) or len(right[j:])
-            break
+            result.append(right.pop(0))
+        k += 1
+        if not left or not right:
+            result.extend(left or right)
+            k += len(left) or len(right)
     return result
 
 def mergeSort(arr):
@@ -146,10 +142,116 @@ def mergeSort(arr):
 
 ```
 
-* Recursive Merge Sort
+* Iterative Merge Sort
+```python
+def mergeSort(lst1, lst2):
+    lst1.sort()
+    lst2.sort()
+    result = []
+    while lst1 and lst2:
+        if lst1[0] < lst2[0]:
+            result.append(lst1.pop(0))
+        else:
+            result.append(lst2.pop(0))
+    result.extend(lst1 or lst2)
+    return result
+```
 
-* quick sort
-* stack sort（堆排序）
+* Quick sort
+  * first as pivot
+
+```python
+def partition(arr, low, high):
+    """
+    first element is pivot
+    low: index of first element
+    high: index of last element
+    """
+    pivot = arr[low]
+    smaller_index = low
+    for i in range(low + 1, high + 1):
+        if arr[i] < pivot:
+            smaller_index += 1
+            arr[smaller_index], arr[i] = arr[i], arr[smaller_index]
+    pivot_index = smaller_index
+    arr[pivot_index], arr[low] = arr[low], arr[pivot_index]
+    return pivot_index
+```
+
+  * last as pivot
+
+```python
+def partition(arr, low, high):
+    """
+    last element is pivot
+    low: index of first element
+    high: index of last element
+    """
+    pivot = arr[high]
+    smaller_index = low - 1
+    for i in range(low, high):
+        if arr[i] < pivot:
+            smaller_index += 1
+            arr[smaller_index], arr[i] = arr[i], arr[smaller_index]
+    pivot_index = smaller_index + 1
+    arr[pivot_index], arr[high] = arr[high], arr[pivot_index]
+    return pivot_index
+```
+
+  * random as pivot
+  * median as pivot
+
+```python
+def median(arr, i, j, k):
+    n = len(arr)
+    if i > n or j > n  or k > n:
+        return -1
+    if arr[i] < arr[j]:
+        return i if arr[k] < arr[i] else k if arr[k] < arr[j] else j
+    else:
+        return i if arr[i] < arr[k] else k if arr[j] < arr[k] else j
+
+def partition(arr, low, high):
+    """
+    median element is pivot
+    low: index of first element
+    high: index of last element
+    find median and exchange it with lowest element, then use lowest element as pivot
+    """
+    middle = low + (high - low) / 2
+    median_index = median(arr, low, middle, high)
+    arr[low], arr[median_index] = arr[median_index], arr[low]
+
+    pivot = arr[low]
+    smaller_index = low
+    for i in range(low + 1, high + 1):
+        if arr[i] < pivot:
+            smaller_index += 1
+            arr[smaller_index], arr[i] = arr[i], arr[smaller_index]
+    pivot_index = smaller_index
+    arr[pivot_index], arr[low] = arr[low], arr[pivot_index]
+    return pivot_index
+```
+
+
+```python
+def quickSortHelper(arr, low, high):
+    """
+    low: index of first element
+    high: index of last element
+    """
+    if low < high:
+        pi = partition(arr, low, high)
+        quickSortHelper(arr, low, pi - 1)
+        quickSortHelper(arr, pi + 1, high)
+
+def quickSort(arr):
+    quickSortHelper(arr, 0, len(arr) - 1)
+```
+
+
+
+* heap sort（堆排序）
 * bucket sort(O(n))（桶排序）
 * count sort(计数排序)
 
