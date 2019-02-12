@@ -44,6 +44,7 @@
 ### Array with Data Structure
 
 ### Sorting Algo
+
 {::options parse_block_html="true" /}
 <table class="table table-bordered table-striped">
   <tbody>
@@ -153,6 +154,7 @@
   </tbody>
 </table>
 {::options parse_block_html="false" /}
+
 * Bubble sort
 
 ```python
