@@ -45,7 +45,6 @@
 
 ### Sorting Algo
 
-{::options parse_block_html="true" /}
 <table class="table table-bordered table-striped">
   <tbody>
       <tr>
@@ -153,7 +152,6 @@
      </tr>
   </tbody>
 </table>
-{::options parse_block_html="false" /}
 
 * Bubble sort
 
