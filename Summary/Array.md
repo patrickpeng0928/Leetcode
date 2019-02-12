@@ -61,7 +61,7 @@
       </tr>
       <tr>
         <td><a href="http://en.wikipedia.org/wiki/Quicksort">Quicksort</a></td>
-        <td><code class="orange">Ω(n log(n))</code></td>
+        <td><code color="orange">Ω(n log(n))</code></td>
         <td><code class="orange">Θ(n log(n))</code></td>
         <td><code class="red">O(n^2)</code></td>
         <td><code class="yellow-green">O(log(n))</code></td>
