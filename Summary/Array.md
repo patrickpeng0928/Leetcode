@@ -109,7 +109,7 @@ def insertionSort(arr):
         arr[j + 1] = key
 ```
 
-* Merge sort - O(n * log n)
+* Merge sort - O(n * log n) - Linked Lists
 * Recursive Merge Sort
 
 ```python
@@ -157,7 +157,7 @@ def mergeSort(lst1, lst2):
     return result
 ```
 
-* Quick sort
+* Quick sort - O(n * log n), O(1) - Array
   * first as pivot
 
 ```python
@@ -176,6 +176,17 @@ def partition(arr, low, high):
     pivot_index = smaller_index
     arr[pivot_index], arr[low] = arr[low], arr[pivot_index]
     return pivot_index
+```
+
+```python
+def quickSort(arr):
+    if not arr:
+        return []
+    pivot   = arr[0]
+    left    = [ x for x in arr if x < pivot ]
+    middle  = [ x for x in arr if x == pivot ]
+    right   = [ x for x in arr if x > pivot ]
+    return quickSort(left) + middle + quickSort(right)
 ```
 
   * last as pivot
@@ -199,6 +210,31 @@ def partition(arr, low, high):
 ```
 
   * random as pivot
+
+```python
+def partitoin(arr, low, high):
+    """
+    Generate a random number between low and high
+    swap it with low
+    Then do it as 'low as pivot'
+    """
+    import random
+    random_index = random.randint(low, high)
+    arr[low], arr[random_index] = arr[random_index], arr[low]
+    # low as pivot
+    pivot = arr[low]
+    smaller_index = low
+    for i in range(low + 1, high + 1):
+        if arr[i] < pivot:
+            smaller_index += 1
+            arr[smaller_index], arr[i] = arr[i], arr[smaller_index]
+    pivot_index = smaller_index
+    arr[pivot_index], arr[low] = arr[low], arr[pivot_index]
+    return pivot_index
+
+
+```
+
   * median as pivot
 
 ```python
@@ -249,9 +285,34 @@ def quickSort(arr):
     quickSortHelper(arr, 0, len(arr) - 1)
 ```
 
+* QuickSort Iterative
+
+```python
+def quickSort(arr):
+    """
+    Using Stack
+    """
+    if len(arr) < 2:
+        return arr
+    stack = []
+    stack.append(len(arr)-1)
+    stack.append(0)
+    while stack:
+        l = stack.pop()
+        r = stack.pop()
+        index = partition(arr, l, r)
+        if l < index - 1:
+            stack.append(index - 1)
+            stack.append(l)
+        if r > index + 1:
+            stack.append(r)
+            stack.append(index + 1)
+```
 
 
 * heap sort（堆排序）
+
+
 * bucket sort(O(n))（桶排序）
 * count sort(计数排序)
 
