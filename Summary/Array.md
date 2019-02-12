@@ -44,9 +44,9 @@
 ### Array with Data Structure
 
 ### Sorting Algo
-
+{::options parse_block_html="true" /}
 <table class="table table-bordered table-striped">
-    <tbody>
+  <tbody>
       <tr>
         <th>Algorithm</th>
         <th colspan="3">Time Complexity</th>
@@ -150,9 +150,9 @@
         <td><code class="orange">O(n log(n))</code></td>
         <td><code class="yellow">O(n)</code></td>
      </tr>
-   </tbody>
+  </tbody>
 </table>
-
+{::options parse_block_html="false" /}
 * Bubble sort
 
 ```python
