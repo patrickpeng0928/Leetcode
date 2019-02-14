@@ -42,10 +42,12 @@
 * Segment Tree
 
 ### Array with Data Structure
+* [Python Big O](https://wiki.python.org/moin/TimeComplexity)
 
 ### Sorting Algo
 
 #### [Big O](http://bigocheatsheet.com)
+
 <table class="table table-bordered table-striped">
   <tbody>
       <tr>
