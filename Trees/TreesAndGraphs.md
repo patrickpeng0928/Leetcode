@@ -232,6 +232,39 @@ class Tree:
 A binary tree is a tree in which each node has up to two children. Not all trees are binary trees.
 ```
 
+```python
+class Node:
+    """
+    Binary Tree
+    """
+    def __init__(self, data):
+        self.left = None
+        self.right = None
+        self.data = data
+
+    def printTree(self):
+        if self.left:
+            print(self.left)
+        print(self.data)
+        if self.right:
+            print(self.right)
+
+    def insert(self, new_data):
+        if self.data:
+            if new_data < self.data:
+                if self.left:
+                    self.left.insert(new_data)
+                else:
+                    self.left = Node(new_data)
+            elif new_data > self.data:
+                if self.right:
+                    self.right.insert(new_data)
+                else:
+                    self.right = Node(new_data)
+        else:
+            self.data = new_data
+```
+
 * A node is called a "leaf" node if it has no children.
 
 #### Binary Trees vs Binary Search Trees
@@ -343,5 +376,139 @@ First, we remove the minimum element and swap it with the last element in the he
 Do we swap it with the left child or the right child? That depends on their values. There's no inherent ordering between the left and right element, but you'll need to take the smaller one in order to maintain the min-heap ordering.
 
 ```
+
+#### Implementation
+* Max-Heaps
+  * parent > children
+  * array.length vs array.heap-size
+  * parrent(i) = (i - 1)/2
+  * left(i) = 2i + 1
+  * right(i) = 2i + 2
+  * arr -> heap, arr[ n/2 + 1, ...., n - 1] are leaves
+  * Keep max-heap
+
+```python
+class Heap:
+    def __init__(self, arr):
+        self.list = arr[:]
+        self.heap_size = len(arr)
+        self.isMaxHeap = False
+        self.build_max_heap()
+
+    def __str__(self):
+        return str(self.list)
+
+    def left(self, i):
+        return 2 * i + 1
+
+    def right(self, i):
+        return 2 * i + 2
+
+    def parent(self, i):
+        return (i - 1) / 2
+
+    def insert(self, key):
+        """
+        run time o(logn)
+        """
+        self.heap_size += 1
+        self.list.append(-float("inf"))
+        self.increase_key(self.heap_size - 1,key)
+
+    def increase_key(self, i, key):
+        """
+        run time o(logn)
+        """
+        if key < self.list[i]:
+            raise ValueError("new key is smaller than current key")
+        self.list[i] = key
+        while i>0 and self.list[self.parent(i)] < self.list[i]:
+            print("i1="+str(i))
+            temp = self.list[i]
+            self.list[i] = self.list[self.parent(i)]
+            self.list[self.parent(i)] = temp
+            i = self.parent(i)
+            print("i2="+str(i))
+
+    def max_heapify(self, i):
+        """
+        run time: O(log n)
+        the key to maintain the max-heap property
+        """
+        l = self.left(i)
+        r = self.right(i)
+        # i_m = i
+        # largest = 0
+        print("l="+str(l)+" r="+str(r))
+        print(self.heap_size)
+        largest = i
+        if l < self.heap_size:
+            if self.list[l] > self.list[largest]:
+                largest = l
+        print("r="+str(r)+" largest="+str(largest))
+        if r < self.heap_size:
+            if self.list[r] > self.list[largest]:
+                largest = r
+        print("largest="+str(largest))
+        if largest != i:
+            self.list[i], self.list[largest] = self.list[largest], self.list[i]
+            self.max_heapify(largest)
+
+    def build_max_heap(self):
+        """
+        run time: O(n * log n)
+        """
+        print(self.heap_size//2)
+        for i in range(self.heap_size // 2 - 1, -1, -1):
+            print("index=", str(i))
+            self.max_heapify(i)
+        self.isMaxHeap = True
+
+    def extract_max(self):
+        """
+        build a maxheap and return the max value of it(the first element)
+        also pop the first element out of the heap
+        run time o(logn)
+        """
+        if self.heap_size < 1:
+            raise ValueError("heap underflow")
+        # if self.ismaxheap == False:
+          # self.build_max_heap()
+        maxele = self.list[0]
+        self.list[0] = self.list[self.heap_size - 1]
+        self.list[self.heap_size - 1] = maxele
+        self.heap_size -= 1
+        self.max_heapify(0)
+        return maxele
+
+    def heap_sort(self):
+        """
+        using recurrence to impelete, can also use for loop
+        """
+        if self.heap_size == 1:
+            return self.list
+        self.build_max_heap()
+        self.list[0], self.list[self.heap_size - 1] = self.list[self.heap_size - 1], self.list[0]
+        self.heap_size -= 1
+        self.heap_sort()
+
+    def heap_sort_iter(self):
+        """
+        iterative
+        """
+        if self.heap_size == 1:
+            return self.list
+        for i in range(self.heap_size - 1, 0, -1):
+            self.list[i], self.list[0] = self.list[0], self.list[1]
+            self.max_heapify(0)
+            self.heap_size -= 1
+            print(self.heap_size)
+            print(self.list)
+
+        print(self.list)
+```
+
+
+* Min-Heaps
 
 ### Tries(Prefix Trees)

@@ -45,6 +45,7 @@
 
 ### Sorting Algo
 
+#### [Big O](http://bigocheatsheet.com)
 <table class="table table-bordered table-striped">
   <tbody>
       <tr>
@@ -421,10 +422,132 @@ def quickSort(arr):
 
 * heap sort（堆排序）
 
+```python
+def heapify(arr, n, i):
+    """
+    Heapify subtree rooted at index i
+    n is size of heap
+    """
+    largest = i # Initialize largest as root
+    l = 2 * i + 1     # left = 2*i + 1
+    r = 2 * i + 2     # right = 2*i + 2
+
+    # See if left child of root exists and is
+    # greater than root
+    if l < n and arr[i] < arr[l]:
+        largest = l
+
+    # See if right child of root exists and is
+    # greater than root
+    if r < n and arr[largest] < arr[r]:
+        largest = r
+
+    # Change root, if needed
+    if largest != i:
+        arr[i],arr[largest] = arr[largest],arr[i] # swap
+
+        # Heapify the root.
+        heapify(arr, n, largest)
+
+# The main function to sort an array of given size
+def heapSort(arr):
+    """
+    Heap sort an array of given size
+    """
+    n = len(arr)
+
+    # Build a maxheap.
+    for i in range(n, -1, -1):
+        heapify(arr, n, i)
+
+    # One by one extract elements
+    for i in range(n - 1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i] # swap
+        heapify(arr, i, 0)
+```
+
+```python
+def adjust_heap(lists, i, size):
+    lchild = 2 * i + 1
+    rchild = 2 * i + 2
+    max = i
+    if i < size / 2:
+        if lchild < size and lists[lchild] > lists[max]:
+            max = lchild
+        if rchild < size and lists[rchild] > lists[max]:
+            max = rchild
+        if max != i:
+            lists[max], lists[i] = lists[i], lists[max]
+            adjust_heap(lists, max, size)
+
+def build_heap(lists, size):
+    for i in range(0, (size/2))[::-1]:
+        adjust_heap(lists, i, size)
+
+def heap_sort(lists):
+    size = len(lists)
+    build_heap(lists, size)
+    for i in range(0, size)[::-1]:
+        lists[0], lists[i] = lists[i], lists[0]
+        adjust_heap(lists, 0, i)
+```
 
 
 * bucket sort(O(n))（桶排序）
+
+```
+Bucket sort is mainly useful when input is uniformly distributed over a range.
+```
+
+```python
+def bucketSort(xs, n):
+    """
+    n buckets - O(len(xs) + n)
+    """
+    arr = []
+    slot_num = n
+    for in range(slot_num):
+        arr.append([])
+    for j in xs:
+        bucket_index = int(slot_num * j)
+        arr[bucket_index].append(j)
+    for i in range(slot_num):
+        arr[i] = insertionSort(arr[i])
+
+    result = [ inner for outer in arr for inner in outer ]
+    return result
+
+def insertionSort(xs):
+    for i in range(1, len(xs)):
+        up = xs[i]
+        j = i - 1
+        while j >= 0  and xs[j] > up:
+            xs[j + 1] = xs[j]
+            j -= 1
+        xs[j + 1] = up
+    return xs
+```
+
 * count sort(计数排序)
+
+```python
+def countSort(xs, k):
+    """
+    n interger between 0 and k - O(n + k)
+    """
+    n=len(xs)
+    result=[0 for i in range(n)]
+    c=[0 for i in range(k + 1)]
+    for i in xs:
+        c[i] += 1
+    for i in range(1, len(c)):
+        c[i] = c[i - 1] + c[i]
+    for i in xs:
+        result[c[i] - 1] = i
+        c[i] -= 1
+    return result
+
+```
 
 ### Pointers
 #### Two Pointers
@@ -508,8 +631,79 @@ Array - Sorting
 
 ### Implementation
 * Recursive
+
+```python
+def binarySearch(arr, l, r, x):
+    """
+    Recursive
+    """
+    if r >= l:
+        mid = (l - r) / 2 + r
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            return binarySearch(arr, l, mid - 1, x)
+        else:
+            return binarySearch(arr, mid + 1, r, x)
+```
+
 * Iterative
+  * left <= right
+
+```python
+def binarySearch(arr, l, r, x):
+    while l <= r:
+        mid = l + (r - l) / 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            r = mid - 1
+        else:
+            l = mid + 1
+    return -1
+```
+
+  * left < right
+
+```python
+def binarySearch(arr, l, r, x):
+    """
+    """
+    while l < r:
+        mid = l + (r - l) / 2
+        if arr[mid] < x:
+            l = mid + 1
+        else:
+            r = mid
+
+    if l == r and arr[l] == x:
+        return l
+    else:
+        return - (l + 1)
+
+```
+
+  * left + 1 < right
+
+```python
+def binarySearch(arr, l, r, x):
+    while l + 1 < r:
+        mid = l + (r - l) / 2
+        if arr[mid] == x
+            return mid
+        elif arr[mid] < x:
+            l = mid
+        else:
+            r = mid
+    if arr[l] == x:
+        return l
+    if arr[r] == x:
+        return r
+    return -1
+```
+
 * Importance:
+
 ```
 mid = (right - left) / 2 + left
 ```
@@ -519,11 +713,6 @@ right + left > Integer.MAX_VALUE (Overflow)
 ```
 * Time complexity: O(log n)
 * Space complexity: O(log n)
-
-#### Iterative Implementation
-* left <= right
-* left < right
-* left + 1 < right
 
 ### Related questions
 * Search, Find, Look up, etc
