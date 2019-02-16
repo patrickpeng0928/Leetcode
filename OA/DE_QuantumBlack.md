@@ -170,9 +170,158 @@ def maxDiff(xs):
 11. Time series
 12. Leetcode 200, 岛之间的最短距离
 ```python
+class Solution:
+    """
+    dfs:
+    if 1, change all its adjacent 1s to 0 until no adjacent 1s, then count 1 island
+    search rest until no 1s
+    """
+    def numIsland(self, grid):
+        """
+        :type: grid: List[List[int]]
+        :rtyep: int
+        """
+        res = 0
+        for r in range(len(grid)):
+            for c in range(len(grid[r])):
+                if grid[r][c]:
+                    self.dfs(grid, r, c)
+                    res += 1
+        return res
+
+    def dfs(self, grid, i, j):
+        """
+        :type: grid:  List[List[int]]
+        :type: i:     index of rows
+        :type: j:     index of columns
+        :rtyep: None
+        """
+        dirs = [[-1, 0], [0, 1], [0, -1], [1, 0]]
+        grid[i][j] = 0
+        for dir in dirs:
+            nr, nc = i + dir[0], j + dir[1]
+            if nr >= 0 and nc >= 0 and nr < len(grid) and nc < len(grid[0]):
+                if grid[nr][nc]:
+                    self.dfs(grid, nr, nc)
+```
+
+```python
+class Solution:
+    """
+    bfs:
+    convert adjacent island to 0
+    """
+    def bfs(self, grid):
+        """
+        :type: grid:  List[List[str]]
+        :rtype: int
+        """
+        if not grid or not grid[0]: return 0
+        M, N = len(grid), len(grid[0])
+        import collections
+        que = collections.deque()
+        res = 0
+        directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+        for i in range(M):
+            for j in range(N):
+                if grid[i][j]:
+                    res += 1
+                    grid[i][j] = 0
+                    que.append((i, j))
+                    while que:
+                        x, y = que.pop()
+                        for d in directions:
+                            nx, ny = x + d[0], y + d[1]
+                            if 0 <= nx < M and 0 <= ny < N and grid[nx][ny]:
+                                grid[nx][ny] = 0
+                                que.append((nx, ny))
+        return res
+```
+
+```python
+class Solution:
+    """
+    dfs
+    """
+    def countIslands(self, grid):
+        count = 0
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j]:
+                    count += 1
+                    self.sink(grid, i, j)
+        return count
+
+    def sink(self, grid, i, j):
+        if i < 0 or i >= len(grid): return
+        if j < 0 or j >= len(grid[i]): return
+        if not grid[i][j]: return
+        grid[i][j] = 0
+        self.sink(grid, i + 1, j)
+        self.sink(grid, i - 1, j)
+        self.sink(grid, i, j + 1)
+        self.sink(grid, i, j - 1)
 
 ```
-13. 两个湖之间挖 canal的最短距离（dfs 标记+bfs 找路径）， m*n 矩阵，0是湖/2， 1是路，最少的1=>0使得湖联通
+
+13. 两个湖之间挖 canal的最短距离（dfs 标记+bfs 找路径）， m*n 矩阵，0是湖， 1是陆，最少的1=>0使得湖联通
+
+Leetcode 934
+
+In a given 2D binary array A, there are two islands.  (An island is a 4-directionally connected group of 1s not connected to any other 1s.)
+
+Now, we may change 0s to 1s so as to connect the two islands together to form 1 island.
+
+Return the smallest number of 0s that must be flipped.  (It is guaranteed that the answer is at least 1.)
+
+```python
+class Solution:
+    """
+    O(A), O(A)
+    Conceptually, our method is very straightforward: find both islands, then for one of the islands, keep "growing" it by 1 until we touch the second island.
+
+    We can use a depth-first search to find the islands, and a breadth-first search to "grow" one of them. This leads to a verbose but correct solution.
+    """
+    def shortestBridge(self, A):
+        R, C = len(A), len(A[0])
+
+        def neighbors(r, c):
+            for nr, nc in ((r-1,c),(r,c-1),(r+1,c),(r,c+1)):
+                if 0 <= nr < R and 0 <= nc < C:
+                    yield nr, nc
+
+        def get_components():
+            done = set()
+            components = []
+            for r, row in enumerate(A):
+                for c, val in enumerate(row):
+                    if val and (r, c) not in done:
+                        # Start dfs
+                        stack = [(r, c)]
+                        seen = {(r, c)}
+                        while stack:
+                            node = stack.pop()
+                            for nei in neighbors(*node):
+                                if A[nei[0]][nei[1]] and nei not in seen:
+                                    stack.append(nei)
+                                    seen.add(nei)
+                        done |= seen
+                        components.append(seen)
+            return components
+
+        source, target = get_components()
+        print source, target
+        queue = collections.deque([(node, 0) for node in source])
+        done = set(source)
+        while queue:
+            node, d = queue.popleft()
+            if node in target: return d - 1
+            for nei in neighbors(*node):
+                if nei not in done:
+                    queue.append((nei, d + 1))
+                    done.add(nei)
+```
+
 14. lc的trapping rain water 变形.
 15. supposed that your team has two separate solutions to solve a problem. In 3-5 sentences, write an email about how do you approach your manager to discuss his/her perspective on these two ideas? 就是说你们组内讨论，无法得出统一结论，让你发个邮件给manager，请求延期交付。
 16. list array
