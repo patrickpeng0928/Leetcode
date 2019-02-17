@@ -323,6 +323,52 @@ class Solution:
 ```
 
 14. lc的trapping rain water 变形.
+
+```python
+class Solution:
+    """
+    brute force - O(n), O(n)
+    """
+    def trap(self, height):
+        if not height: return 0
+        n, res = len(height), 0
+        left_max, right_max = [0] * n, [0] * n
+
+        left_max[0] = height[0]
+        for i in range(1, n):
+            left_max[i] = max(height[i - 1], left_max[i - 1])
+        right_max[n - 1] = height[n - 1]
+        for i in range(n - 2, -1, -1):
+            right_max[i] = max(right_max[i + 1], height[i + 1])
+
+        for i in range(1, n - 1):
+            res += min(left_max[i], right_max[i]) - height[i]
+        return res
+```
+```python
+class Solution:
+    """
+    dp - O(n), O(n)
+    """
+    def trap(self, height):
+        if not height: return 0
+        n, res = len(height), 0
+        left_max, right_max = [0] * n, [0] * n
+
+        left_max[0] = height[0]
+        for i in range(1, n):
+            left_max[i] = max(height[i], left_max[i - 1])
+        right_max[n - 1] = height[n - 1]
+        for i in range(n - 2, -1, -1):
+            right_max[i] = max(right_max[i + 1], height[i])
+
+        for i in range(1, n - 1):
+            res += min(left_max[i], right_max[i]) - height[i]
+        return res
+```
+
+
+
 15. supposed that your team has two separate solutions to solve a problem. In 3-5 sentences, write an email about how do you approach your manager to discuss his/her perspective on these two ideas? 就是说你们组内讨论，无法得出统一结论，让你发个邮件给manager，请求延期交付。
 16. list array
 17. SQL
