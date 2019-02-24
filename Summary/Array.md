@@ -173,6 +173,15 @@ def bubbleSort(arr):
 
 ```
 
+```python
+def bubbleSort(arr):
+    n = len(arr)
+    for i in range(1, n):
+        for j  in range(i):
+            if arr[j + 1] < arr[j]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+```
+
 * Select sort
 
 ```python
@@ -270,7 +279,22 @@ def mergeSort(lst1, lst2):
 ```
 
 * Quick sort - O(n * log n), O(1) - Array
+
   * first as pivot
+
+```python
+def quickSort(arr):
+    """
+    Recursive, first as pivot
+    """
+    if not arr:
+        return []
+    pivot   = arr[0]
+    left    = [ x for x in arr if x < pivot ]
+    middle  = [ x for x in arr if x == pivot ]
+    right   = [ x for x in arr if x > pivot ]
+    return quickSort(left) + middle + quickSort(right)
+```
 
 ```python
 def partition(arr, low, high):
@@ -285,20 +309,9 @@ def partition(arr, low, high):
         if arr[i] < pivot:
             smaller_index += 1
             arr[smaller_index], arr[i] = arr[i], arr[smaller_index]
-    pivot_index = smaller_index
+    pivot_index = smaller_index + 1
     arr[pivot_index], arr[low] = arr[low], arr[pivot_index]
     return pivot_index
-```
-
-```python
-def quickSort(arr):
-    if not arr:
-        return []
-    pivot   = arr[0]
-    left    = [ x for x in arr if x < pivot ]
-    middle  = [ x for x in arr if x == pivot ]
-    right   = [ x for x in arr if x > pivot ]
-    return quickSort(left) + middle + quickSort(right)
 ```
 
   * last as pivot
@@ -343,8 +356,6 @@ def partitoin(arr, low, high):
     pivot_index = smaller_index
     arr[pivot_index], arr[low] = arr[low], arr[pivot_index]
     return pivot_index
-
-
 ```
 
   * median as pivot
@@ -407,8 +418,8 @@ def quickSort(arr):
     if len(arr) < 2:
         return arr
     stack = []
-    stack.append(len(arr)-1)
-    stack.append(0)
+    stack.append(arr[-1])
+    stack.append(arr[0])
     while stack:
         l = stack.pop()
         r = stack.pop()

@@ -155,6 +155,27 @@ def maxDiff(xs):
     * https://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/
     *
 
+Leetcode 739
+
+```python
+class Solution:
+    """
+    stack
+    """
+    def dailyTemp(self, T):
+        N = len(T)
+        stack = []
+        res = [0] * N
+        for i, t in enumerate(T):
+            while stack and stack[-1][1] < t:
+                index_higher = i
+                index_smaller = stack.pop()[0]
+                res[index_smaller] = index_higher - index_smaller
+            stack.append((i, t))
+        return res
+```
+
+
 3. ML
 4. 提供根据顺序写程序使任意数据按此规律排序
 5. Statistic

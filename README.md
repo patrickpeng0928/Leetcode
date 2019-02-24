@@ -58,13 +58,18 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 | 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_ListOperation.py) | O(n^2) | O(n) | Easy |  |  |
 | 389 | [Find the Difference](BitManipulation/389.Find_the_Difference/389.Find_the_Difference.md) | [Python](BitManipulation/389.Find_the_Difference/389.Find_the_Difference_Array.py) | O(1) | O(1) | Easy |  |  |
 
+
 ## String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 | 190 | [Reverse Bits](BitManipulation/190.Reverse_Bits/190.Reverse_Bits.md) | [Python](BitManipulation/190.Reverse_Bits/190.Reverse_Bits_String.py) | O(1) | O(1) | Easy |  |  |
 | 231 | [Power of Two](BitManipulation/231.Power_of_Two/231.Power_of_Two.md) | [Python](BitManipulation/231.Power_of_Two/231.Power_of_Two_String.py) | O(1) | O(1) | Easy |  |  |
 | 342 | [Power of Four](BitManipulation/342.Power_of_Four/342.Power_of_Four.md) | [Python](BitManipulation/342.Power_of_Four/342.Power_of_Four_String.py) | O(1) | O(1) | Easy |  |  |
-
+| 003 | [Longest Substring Without Repeating Characters](Array/3.LongestSubstringWithoutRepeatingCharacters/Readme.md) | [Python](Array/3.LongestSubstringWithoutRepeatingCharacters/LongestSubstringWithoutRepeatingCharacters_Array.py) | O(n) | O(n) | Medium |  | Sliding window |
+| 159 | [Longest Substring with At Most Two Distinct Characters](Array/159.LongestSubstringWithAtMostTwoDistinctCharacters/Readme.md) | [Python](Array/159.LongestSubstringWithAtMostTwoDistinctCharacters/LongestSubstringWithAtMostTwoDistinctCharacters_Hashtable.py) | O(n) | O(n) | Hard |  | Sliding window |
+| 340 | [Longest Substring with At Most K Distinct Characters](Array/340.LongestSubstringWithAtMostKDistinctCharacters/Readme.md) | [Python](Array/340.LongestSubstringWithAtMostKDistinctCharacters/LongestSubstringWithAtMostKDistinctCharacters_SlidingWindow.py) | O(n) | O(1) | Hard |  | Sliding window |
+| 395 | [Longest Substring with At Least K Repeating Characters](Array/395.LongestSubstringWithAtLeastKRepeatingCharacters/Readme.md) | [Python](Array/395.LongestSubstringWithAtLeastKRepeatingCharacters/LongestSubstringWithAtLeastKDistinctCharacters_DivideConquer.py) | O(n) | O(1) | Hard |  | Divide and Conquer |
+| 424 | [Longest Repeating Character Replacement](Array/424.LongestRepeatingCharacterReplacement/Readme.md) | [Python](Array/424.LongestRepeatingCharacterReplacement/LongestRepeatingCharacterReplacement.py) | O(n) | O(1) | Medium |  |  |
 
 ## Linked List
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
@@ -95,6 +100,9 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 | 136 | [Single Number](BitManipulation/136.Single_Number/136.Single_Number.md) | [Python](BitManipulation/136.Single_Number/136.Single_Number_HashTable.py) | O(n) | O(n) | Easy |  |  |
+| 159 | [Longest Substring with At Most Two Distinct Characters](Array/159.LongestSubstringWithAtMostTwoDistinctCharacters/Readme.md) | [Python](Array/159.LongestSubstringWithAtMostTwoDistinctCharacters/LongestSubstringWithAtMostTwoDistinctCharacters_Hashtable.py) | O(n) | O(1) | Hard |  | Sliding window |
+| 340 | [Longest Substring with At Most K Distinct Characters](Array/340.LongestSubstringWithAtMostKDistinctCharacters/Readme.md) | [Python](Array/340.LongestSubstringWithAtMostKDistinctCharacters/LongestSubstringWithAtMostKDistinctCharacters_Hashtable.py) | O(n) | O(1) | Hard |  | Sliding window |
+
 
 ## Math
 |  #  |                                           Title                                           |                                     Solution                                      | Time | Space | Difficulty | Tag | Note |
@@ -119,7 +127,7 @@ The number of LeetCode questions is increasing every week. I'll keep updating fo
 ## Recursion
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-
+| 395 | [Longest Substring with At Least K Repeating Characters](Array/395.LongestSubstringWithAtLeastKRepeatingCharacters/Readme.md) | [Python](Array/395.LongestSubstringWithAtLeastKRepeatingCharacters/LongestSubstringWithAtLeastKDistinctCharacters_DivideConquer.py) | O(n) | O(1) | Medium |  | Divide and Conquer |
 
 ## Binary Search
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note|
