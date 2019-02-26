@@ -1,4 +1,4 @@
-# QA Preparation for DE - QuantumBlack
+# OA Preparation for DE - QuantumBlack
 ## 2/9/2019
 
 ## Arrays
@@ -393,3 +393,47 @@ class Solution:
 15. supposed that your team has two separate solutions to solve a problem. In 3-5 sentences, write an email about how do you approach your manager to discuss his/her perspective on these two ideas? 就是说你们组内讨论，无法得出统一结论，让你发个邮件给manager，请求延期交付。
 16. list array
 17. SQL
+
+## Questions
+###
+```python
+import pandas as pd
+df = pd.read_csv(input_file, sep = " ", header = None)
+df.columns = ['hostname', '-', '--', 'datetime', 'timezone', 'request', 'response_code', 'bytes']
+grouped = df.groupby('hostname')
+result = grouped['hostname'].count()
+output_file = "records_" + input_file
+result.to_csv(output_file, sep = ' ')
+```
+###
+```oracle
+SELECT t1.name, t.avgSalary
+FROM (SELECT d.name, AVG(p.SALARY) AS avgSalary
+      FROM DEPARTMENT d
+      JOIN PROFESSOR p
+      ON d.id = p.DEPARTMENT_ID
+      GROUP BY d.name
+     ) t1
+JOIN (SELECT d.name, AVG(p.SALARY) AS avgSalary
+      FROM DEPARTMENT d
+      JOIN PROFESSOR p
+      ON d.id = p.DEPARTMENT_ID
+      GROUP BY d.name
+      ORDER BY avgSalary DESC
+      LIMIT 1
+     ) t2
+ON t1.avgSalary = t2.avgSalary
+```
+###
+```oracle
+SELECT CASE
+          WHEN P_ID IS NULL THEN CONCAT(ID, ' ROOT')
+          WHEN ID in (SELECT DISTINCT P_ID FROM TREE) THEN CONCAT(ID, ' INNER')
+          ELSE CONCAT(ID, ' LEAF')
+       END
+FROM TREE
+```
+###
+```python
+[a-z]{1,6}_{0,1}[0-9]{0,4}
+```
