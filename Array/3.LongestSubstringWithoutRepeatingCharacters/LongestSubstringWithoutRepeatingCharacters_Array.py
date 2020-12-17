@@ -24,3 +24,16 @@ class Solution(object):
             # update the occureance of the char
             dict[char] = i
         return res
+
+
+if __name__ == "__main__":
+    print("Start testing ... ")
+    s = Solution()
+    assert s.longestUnique("abcabcbb") == 3, \
+        "Failed, example: abcabcb"
+    assert s.longestUnique("bbbbb") == 1, \
+        "Failed, example: bbbbb"
+    assert s.longestUnique("pwwkew") == 3, \
+        "Failed, example: pwwkew" 
+    print("All tests passed.")
+
